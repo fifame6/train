@@ -1,6 +1,14 @@
 ###
+
 GET http://localhost:7999/member/member/count
 Accept: application/json
 
 ###
+
+###
+POST http://localhost:7999//member/member/register
+Content-Type: application/x-www-form-urlencoded
+
+mobile=883500
+
 ###
