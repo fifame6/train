@@ -1,5 +1,6 @@
 package com.fifame.train.member.mapper;
 
+
 import com.fifame.train.member.domain.Member;
 import com.fifame.train.member.domain.MemberExample;
 import java.util.List;
@@ -28,3 +29,4 @@ public interface MemberMapper {
 
     int updateByPrimaryKey(Member record);
 }
+
