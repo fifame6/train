@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface MemberMapper {
+    int count();
     long countByExample(MemberExample example);
 
     int deleteByExample(MemberExample example);

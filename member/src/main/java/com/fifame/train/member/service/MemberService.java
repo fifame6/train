@@ -23,8 +23,11 @@ public class MemberService {
     @Resource
     private MemberMapper memberMapper;
 
-    public int count(){
-        return (int) memberMapper.countByExample(null);
+//    public int count(){
+//        return (int) memberMapper.countByExample(null);
+//    }
+    public int count() {
+        return memberMapper.count();
     }
 
     public long register(MemberRegisterReq req) {

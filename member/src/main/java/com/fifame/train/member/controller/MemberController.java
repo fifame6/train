@@ -21,7 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
     @GetMapping("/count")
+    public Integer count() {
+        return memberService.count();
+    }
+    @GetMapping("/count1")
     public CommonResp<Integer> sayHello(){
         int count = memberService.count();
         CommonResp<Integer> integerCommonResp = new CommonResp<>();
