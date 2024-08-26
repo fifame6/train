@@ -35,7 +35,7 @@
                 <scope>import</scope>
             </dependency>
 
-<!--            使用aop来拦击日志-->
+            <!--            使用aop来拦击日志-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
@@ -70,7 +70,6 @@
 
         </dependencies>
     </dependencyManagement>
-
 
 
 </project>
