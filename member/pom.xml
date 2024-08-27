@@ -39,6 +39,13 @@
             <artifactId>spring-cloud-starter</artifactId>
         </dependency>
 
+<!--        引入springboot-test模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
 
 
     </dependencies>

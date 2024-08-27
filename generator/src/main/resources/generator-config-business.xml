@@ -28,6 +28,14 @@
                         password="abc123">
         </jdbcConnection>
 
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+            <!-- This property is used to specify whether MyBatis Generator should force the use of JSR-310 data types for DATE, TIME,
+            and TIMESTAMP fields, rather than using java.util.Date -->
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+
         <!-- domain类的位置 targetProject是相对pom.xml的路径-->
         <javaModelGenerator targetProject="../member/src/main/java"
                             targetPackage="com.fifame.train.member.domain"/>
@@ -43,6 +51,6 @@
 
         <!--<table tableName="member" domainObjectName="Member"/>-->
         <!--<table tableName="passenger" domainObjectName="Passenger"/>-->
-        <table tableName="member" domainObjectName="Member"/>
+        <table tableName="sms_verification" domainObjectName="SMSVerification"/>
     </context>
 </generatorConfiguration>

@@ -162,7 +162,7 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
 
-  <select id="count" resultType="int">
-    select count(1) from member
-  </select>
+<!--  <select id="count" resultType="int">-->
+<!--    select count(1) from member-->
+<!--  </select>-->
 </mapper>
