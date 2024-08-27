@@ -9,10 +9,7 @@ import com.fifame.train.member.service.MemberService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName TestController
@@ -49,7 +46,7 @@ public class MemberController {
 
 
     @PostMapping("/login")
-    public CommonResp login(@Valid MemberLoginReq req){
+    public CommonResp login(@Valid @RequestBody MemberLoginReq req){
         MemberLoginResp memberLoginResp = memberService.login(req);
         CommonResp<MemberLoginResp> integerCommonResp = new CommonResp<>();
         integerCommonResp.setContent(memberLoginResp);
@@ -58,7 +55,7 @@ public class MemberController {
 
 
     @PostMapping("/send-code")
-    public CommonResp sendCode(@Valid MemberSendCodeReq req){
+    public CommonResp sendCode(@Valid @RequestBody MemberSendCodeReq req){
         memberService.sendCode(req);
         return new CommonResp();
     }

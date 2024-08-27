@@ -115,7 +115,7 @@ public class MemberService {
 
     public MemberLoginResp login(@Valid MemberLoginReq req) {
         String mobile = req.getMobile();
-        String code = req.getVerificationCode();
+        String code = req.getCode();
         //一般不会直接将该对象返回出去,该对象是有密码的
         Member memberDB = selectByMobile(mobile);
 

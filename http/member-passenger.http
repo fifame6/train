@@ -1,0 +1,40 @@
+###
+
+GET http://localhost:7999/member/member/count
+Accept: application/json
+token:123
+
+###
+
+###
+POST http://localhost:7999/member/member/register
+Content-Type: application/x-www-form-urlencoded
+
+mobile=6543534
+###
+POST http://localhost:7999/member/member/send-code
+Content-Type: application/x-www-form-urlencoded
+
+mobile=13000000000
+###
+POST http://192.168.5.90:7999/member/member/login
+Content-Type: application/json
+
+{
+  "mobile": 13000000000,
+  "code": 8888
+}
+
+###
+POST http://192.168.5.90:7999/member/passenger/save
+Content-Type: application/json
+token: {{token}}
+
+{
+  "name": "张三",
+  "idCard": 16456465646,
+  "type": 1
+}
+
+
+###

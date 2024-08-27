@@ -18,6 +18,6 @@ public class MemberLoginReq {
     private String mobile;
 
     @NotBlank(message = "短信验证码不能为空")
-    private String verificationCode;
+    private String code;
 }
 

@@ -1,4 +1,4 @@
-package com.fifame.train.common.util;
+package com.fifame.train.gateway.config.util;
 
 import cn.hutool.core.date.DateField;
 import cn.hutool.core.date.DateTime;
@@ -64,6 +64,7 @@ public class JwtUtil {
 
     public static void main(String[] args) {
         createToken(1L, "123");
+
         String token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE2NzY4OTk4MjcsIm1vYmlsZSI6IjEyMyIsImlkIjoxLCJleHAiOjE2NzY4OTk4MzcsImlhdCI6MTY3Njg5OTgyN30.JbFfdeNHhxKhAeag63kifw9pgYhnNXISJM5bL6hM8eU";
         validate(token);
 
