@@ -17,6 +17,13 @@
     </properties>
 
     <dependencies>
+
+
+        <!-- 集成mysql连接 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
 <!--        //增删改查模板依赖-->
         <dependency>
             <groupId>org.freemarker</groupId>

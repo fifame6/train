@@ -5,7 +5,7 @@ import cn.hutool.core.date.DateTime;
 import cn.hutool.core.util.ObjectUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.fifame.train.common.resp.PageResp;
+import com.fifame.train.common.response.PageResp;
 import com.fifame.train.common.util.SnowUtil;
 import com.fifame.train.${module}.domain.${Domain};
 import com.fifame.train.${module}.domain.${Domain}Example;

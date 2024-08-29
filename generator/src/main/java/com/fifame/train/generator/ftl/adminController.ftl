@@ -1,8 +1,8 @@
 package com.fifame.train.${module}.controller.admin;
 
 import com.fifame.train.common.context.LoginMemberContext;
-import com.fifame.train.common.resp.CommonResp;
-import com.fifame.train.common.resp.PageResp;
+import com.fifame.train.common.response.CommonResp;
+import com.fifame.train.common.response.PageResp;
 import com.fifame.train.${module}.req.${Domain}QueryReq;
 import com.fifame.train.${module}.req.${Domain}SaveReq;
 import com.fifame.train.${module}.resp.${Domain}QueryResp;

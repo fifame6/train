@@ -15,9 +15,9 @@ import java.util.*;
 
 public class ServerGenerator {
     static boolean readOnly = false;
-    static String vuePath = "admin/src/views/main/";
-    static String serverPath = "[module]/src/main/java/com/fifame/train/[module]/";
-    static String pomPath = "generator/pom.xml";
+    static String vuePath = "D://workspace_train_web/admin1/src/views/main/";
+    static String serverPath = "D://workspace_train/train/[module]/src/main/java/com/fifame/train/[module]/";
+    static String pomPath = "D://workspace_train/train/generator/pom.xml";
     static String module = "";
     // static {
     //     new File(serverPath).mkdirs();
@@ -26,6 +26,7 @@ public class ServerGenerator {
     public static void main(String[] args) throws Exception {
         // 获取mybatis-generator
         String generatorPath = getGeneratorPath();
+        System.out.println(generatorPath);
         // 比如generator-config-member.xml，得到module = member
         module = generatorPath.replace("src/main/resources/generator-config-", "").replace(".xml", "");
         System.out.println("module: " + module);
@@ -34,7 +35,7 @@ public class ServerGenerator {
         System.out.println("servicePath: " + serverPath);
 
         // 读取table节点
-        Document document = new SAXReader().read("generator/" + generatorPath);
+        Document document = new SAXReader().read("train/generator/" + generatorPath);
         Node table = document.selectSingleNode("//table");
         System.out.println(table);
         Node tableName = table.selectSingleNode("@tableName");
