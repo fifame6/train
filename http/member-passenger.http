@@ -38,3 +38,28 @@ token: {{token}}
 
 
 ###
+POST http://192.168.5.90:7999/member/passenger/save
+Content-Type: application/json
+token: {{token}}
+
+{
+  "id": 1828718362562269184,
+  "name": "fifame",
+  "memberId": 1828281464098263040,
+  "idCard": 16456465646,
+  "type": 2
+}
+
+
+
+###
+GET http://localhost:7999/member/passenger/query-list
+Accept: application/json
+token: {{token}}
+
+
+
+###分页查询
+GET http://localhost:7999/member/passenger/query-list?page=1&size=3
+Accept: application/json
+token: {{token}}

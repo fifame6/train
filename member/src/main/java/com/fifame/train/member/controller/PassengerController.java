@@ -1,13 +1,18 @@
 package com.fifame.train.member.controller;
 
+import com.fifame.train.common.context.LoginMemberContext;
 import com.fifame.train.common.response.CommonResp;
+import com.fifame.train.common.response.PageResp;
+import com.fifame.train.member.req.PassengerQueryReq;
 import com.fifame.train.member.req.PassengerSaveReq;
+import com.fifame.train.member.resp.PassengerQueryResp;
 import com.fifame.train.member.service.PassengerService;
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.websocket.server.PathParam;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @ClassName PassengerController
@@ -29,5 +34,19 @@ public class PassengerController {
         passengerService.savePassenger(req);
         return new CommonResp();
     }
+
+    @GetMapping("/query-list")
+    public CommonResp<PageResp<PassengerQueryResp>> queryPassengerList(@Valid PassengerQueryReq req) {
+        req.setMemberId(LoginMemberContext.getId());
+        PageResp<PassengerQueryResp> passengerQueryResps = passengerService.queryPassengerList(req);
+        return new CommonResp<PageResp<PassengerQueryResp>>(passengerQueryResps);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public CommonResp deleteByID(@PathVariable Long id) {
+        passengerService.delete(id);
+        return new CommonResp();
+    }
+
 }
 
